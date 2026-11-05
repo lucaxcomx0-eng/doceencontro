@@ -1,0 +1,8 @@
+{
+  "name": "doce-encontro-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site e painel administrativo da Doce Encontro",
+  "engines": { "node": ">=22.5" },
+  "scripts": { "start": "node server.js" }
+}

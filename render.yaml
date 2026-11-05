@@ -2,19 +2,15 @@ services:
   - type: web
     name: doce-encontro
     runtime: docker
-    plan: 0.5c-512mb
+    plan: free
     dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /
-    disk:
-      name: doce-encontro-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: NODE_ENV
         value: production
       - key: DATA_DIR
-        value: /var/data
+        value: /tmp/doce-encontro
       - key: ADMIN_PASSWORD
         sync: false
       - key: PIX_KEY
